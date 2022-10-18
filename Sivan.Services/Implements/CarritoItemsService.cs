@@ -10,8 +10,8 @@ namespace Sivan.Services.Implements
 {
    public class CarritoItemsService : ICarritoItemsService
     {
-        private readonly IMapper _mapper;
-        private readonly ICarritoItemsService _Carrito_ItemsService;
+        //    private readonly IMapper _mapper;
+        //    private readonly ICarritoItemsService _Carrito_ItemsService;
 
     }
 }

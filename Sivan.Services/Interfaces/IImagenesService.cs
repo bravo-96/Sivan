@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sivan.Services.Interfaces
 {
-    interface IImagenesService
+    public interface IImagenesService
     {
     }
 }
