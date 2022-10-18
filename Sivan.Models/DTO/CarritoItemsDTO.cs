@@ -6,24 +6,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sivan.Models.Entities
+namespace Sivan.Models.DTO
 {
-    [Table(name: "Compra_Session", Schema = "dbo")]
-
-    public class Compra_Session
+    public class CarritoItemsDTO
     {
-
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        [ForeignKey(name: "UsuarioId")]
-        public int UsuarioId { get; set; }
-        //public Usuario Usuario {get; set;}
-
+        public int SesionId { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        public int Total { get; set; }
+        public int ProductoId { get; set; }
+
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        public int Cantidad { get; set; }
 
         public DateTime FechaCreacion { get; set; }
 

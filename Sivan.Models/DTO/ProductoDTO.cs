@@ -11,10 +11,10 @@ namespace Sivan.Models.DTO
         [Key]
         public int Id { get; set; }
 
-        //[Required(ErrorMessage = "El campo {0} es requerido")]
-        //[StringLength(255)]
-        //[DataType(DataType.Text)]
-        //public string Nombre { get; set; }
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        [StringLength(255)]
+        [DataType(DataType.Text)]
+        public string Nombre { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [StringLength(255)]

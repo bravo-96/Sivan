@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sivan.Services.Implements
 {
-    class Usuarios_pagosService
+    class CompraSessionService
     {
     }
 }

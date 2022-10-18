@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Sivan.Models.Entities
 {
-    [Table(name: "Carrito_items", Schema = "dbo")]
+    [Table(name: "CarritoItems", Schema = "dbo")]
 
-    public class Carrito_items
+    public class CarritoItems
     {
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -30,10 +30,16 @@ namespace Sivan.Models.Entities
         [Required(ErrorMessage = "El campo {0} es requerido")]
         public int Cantidad { get; set; }
 
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        [DataType(DataType.DateTime)]
+        [Column("fecha_creacion")]
         public DateTime FechaCreacion { get; set; }
 
-        public DateTime FechaModificacion { get; set; }
 
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        [DataType(DataType.DateTime)]
+        [Column("fecha_modificacion")]
+        public DateTime FechaModificacion { get; set; }
 
     }
 }

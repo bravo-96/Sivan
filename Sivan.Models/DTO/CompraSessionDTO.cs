@@ -8,25 +8,27 @@ using System.Threading.Tasks;
 
 namespace Sivan.Models.DTO
 {
-    public class Carrito_itemsDTO
+    public class CompraSessionDTO
     {
-
-
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        public int SesionId { get; set; }
+        public int UsuarioId { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        public int ProductoId { get; set; }
+        public int Total { get; set; }
+
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        public int Cantidad { get; set; }
-
+        [DataType(DataType.DateTime)]
+        [Column("fecha_creacion")]
         public DateTime FechaCreacion { get; set; }
 
-        public DateTime FechaModificacion { get; set; }
 
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        [DataType(DataType.DateTime)]
+        [Column("fecha_modificacion")]
+        public DateTime FechaModificacion { get; set; }
     }
 }

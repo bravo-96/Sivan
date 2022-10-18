@@ -34,7 +34,7 @@ namespace Sivan.Models.Entities
         [StringLength(255)]
         [Column("Descripcion")]
         [DataType(DataType.Text)]
-        public string Estado { get; set; } // !!!!!!
+        public string Estado { get; set; } 
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [DataType(DataType.DateTime)]

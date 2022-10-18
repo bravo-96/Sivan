@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sivan.Services.Interfaces
+namespace Sivan.Services.Implements
 {
-    interface IUsuario_direccionService
+    class UsuarioDireccionService
     {
     }
 }

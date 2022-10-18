@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Sivan.Models.Profiles
 {
-    public class Usuario_direccionProfile : Profile
+    public class UsuarioDireccionProfile : Profile
     {
-        public Usuario_direccionProfile()
+        public UsuarioDireccionProfile()
         {
-            CreateMap<Usuario_direccion, Usuario_direccionDTO>()
+            CreateMap<UsuarioDireccion, UsuarioPagosDTO>()
                        .ForMember(destino => destino.Id, option => option.MapFrom(origen => origen.Id))
                        .ForMember(destino => destino.UsuarioId, option => option.MapFrom(origen => origen.UsuarioId))
                        .ForMember(destino => destino.Direccion, option => option.MapFrom(origen => origen.Direccion))

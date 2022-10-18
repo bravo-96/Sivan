@@ -40,10 +40,17 @@ namespace Sivan.Models.Entities
         [DataType(DataType.PhoneNumber)]
         public string Telefono { get; set; }
 
+
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        [DataType(DataType.DateTime)]
+        [Column("fecha_creacion")]
         public DateTime FechaCreacion { get; set; }
 
-        public DateTime FechaModificacion { get; set; }
 
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        [DataType(DataType.DateTime)]
+        [Column("fecha_modificacion")]
+        public DateTime FechaModificacion { get; set; }
 
     }
 }

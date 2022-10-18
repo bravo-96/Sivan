@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Sivan.Models.Entities
 {
-    [Table(name: "Usuario_direccion", Schema = "dbo")]
+    [Table(name: "UsuarioDireccion", Schema = "dbo")]
 
-    public class Usuario_direccion
+    public class UsuarioDireccion
     {
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]

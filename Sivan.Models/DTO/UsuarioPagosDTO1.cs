@@ -6,42 +6,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sivan.Models.Entities
+namespace Sivan.Models.DTO
 {
-    [Table(name: "Usuarios_pagos", Schema = "dbo")]
-
-    public class Usuarios_pagos
+    public class UsuarioPagosDTO
     {
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        [ForeignKey(name: "UsuarioId")]
         public int UsuarioId { get; set; }
-        //public Usuario Usuario {get; set;}
-
 
         [StringLength(200)]
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [DataType(DataType.Text)]
-        public string TipoPago { get; set; }
+        public string Direccion { get; set; }
+
+
+        [StringLength(100)]
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        [DataType(DataType.Text)]
+        public string Ciudad { get; set; }
+
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [DataType(DataType.Text)]
-        public int MontoCompra { get; set; }
+        public int CodigoPostal { get; set; }
 
 
+        [StringLength(180)]
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [DataType(DataType.Text)]
-        public string Banco { get; set; }
-
+        public string Pais { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        [DataType(DataType.DateTime)]
-        public DateTime Vencimiento { get; set; }
-
+        [DataType(DataType.PhoneNumber)]
+        public string Telefono { get; set; }
 
     }
 }

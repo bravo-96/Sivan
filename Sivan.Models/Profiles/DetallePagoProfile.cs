@@ -9,18 +9,21 @@ using System.Threading.Tasks;
 
 namespace Sivan.Models.Profiles
 {
-    public class CarritoItemsProfile : Profile
+    public class DetallePagoProfile : Profile
     {
-        public CarritoItemsProfile()
+
+        public DetallePagoProfile()
         {
-            CreateMap<CarritoItems, CarritoItemsDTO>()
+            CreateMap<DetallePago, DetallePagoDTO>()
                            .ForMember(destino => destino.Id, option => option.MapFrom(origen => origen.Id))
-                           .ForMember(destino => destino.SesionId, option => option.MapFrom(origen => origen.SesionId))
-                           .ForMember(destino => destino.ProductoId, option => option.MapFrom(origen => origen.ProductoId))
-                           .ForMember(destino => destino.Cantidad, option => option.MapFrom(origen => origen.Cantidad))
+                           .ForMember(destino => destino.OrdenId, option => option.MapFrom(origen => origen.OrdenId))
+                           .ForMember(destino => destino.Monto, option => option.MapFrom(origen => origen.Monto))
+                           .ForMember(destino => destino.Banco, option => option.MapFrom(origen => origen.Banco))
+                           .ForMember(destino => destino.Estado, option => option.MapFrom(origen => origen.Estado))
                            .ForMember(destino => destino.FechaCreacion, option => option.MapFrom(origen => origen.FechaCreacion))
                            .ForMember(destino => destino.FechaModificacion, option => option.MapFrom(origen => origen.FechaModificacion))
                            .ReverseMap();
         }
     }
 }
+
