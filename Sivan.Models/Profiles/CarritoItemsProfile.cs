@@ -8,7 +8,7 @@ namespace Sivan.Models.Profiles
     {
         public CarritoItemsProfile()
         {
-            CreateMap<CarritoItem, CarritoItemsDTO>()
+            CreateMap<CarritoItem, CarritoItemDTO>()
                            .ForMember(destino => destino.Id, option => option.MapFrom(origen => origen.Id))
                            .ForMember(destino => destino.SesionId, option => option.MapFrom(origen => origen.SesionId))
                            .ForMember(destino => destino.ProductoId, option => option.MapFrom(origen => origen.ProductoId))

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Sivan.Models.DTO
 {
-    public class CarritoItemsDTO
+    public class CarritoItemDTO
     {
         [Display(Name = "Id")]
         [Required(ErrorMessage = "El campo {0} es requerido")]
