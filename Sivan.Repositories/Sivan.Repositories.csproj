@@ -5,11 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Sivan.DataAccess\Sivan.DataAccess.csproj" />
+    <ProjectReference Include="..\Sivan.Models\Sivan.Models.csproj" />
   </ItemGroup>
 
 </Project>
