@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sivan.Services.Implements
 {
-   public class CarritoItemsService : ICarritoItemsService
+   public class CarritoItemService : ICarritoItemService
     {
         //    private readonly IMapper _mapper;
         //    private readonly ICarritoItemsService _Carrito_ItemsService;

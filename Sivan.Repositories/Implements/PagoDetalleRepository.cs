@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sivan.Services.Interfaces
+namespace Sivan.Repositories.Generic
 {
-    public interface ICarritoItemsService
+    public class PagoDetalleRepository
     {
     }
 }

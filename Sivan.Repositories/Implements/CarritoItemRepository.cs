@@ -8,29 +8,29 @@ using System.Threading.Tasks;
 
 namespace Sivan.Repositories.Implements
 {
-    public class CarritoItemsRepository : ICarritoItemsRepository
+    public class CarritoItemRepository : ICarritoItemRepository
     {
         public Task Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<CarritoItems>> GetAll()
+        public Task<IEnumerable<CarritoItem>> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public Task<CarritoItems> GetById(int id)
+        public Task<CarritoItem> GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<CarritoItems> Insert(CarritoItems model)
+        public Task<CarritoItem> Insert(CarritoItem model)
         {
             throw new NotImplementedException();
         }
 
-        public Task<CarritoItems> Update(CarritoItems model)
+        public Task<CarritoItem> Update(CarritoItem model)
         {
             throw new NotImplementedException();
         }

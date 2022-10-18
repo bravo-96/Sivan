@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sivan.Repositories.Implements
+namespace Sivan.Services.Implements
 {
-    public class CompraSessionRepository
+    public class PagoDetalleService
     {
     }
 }

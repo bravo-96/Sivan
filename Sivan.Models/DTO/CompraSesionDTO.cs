@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Sivan.Models.DTO
 {
-    public class CompraSessionDTO
+    public class CompraSesionDTO
     {
         [Display(Name = "Id")]
         [Required(ErrorMessage = "El campo {0} es requerido")]

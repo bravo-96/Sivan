@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sivan.Services.Interfaces
 {
-    public interface ICompraSessionService
+    public interface ICarritoItemService
     {
     }
 }

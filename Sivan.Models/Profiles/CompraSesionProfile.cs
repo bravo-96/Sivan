@@ -4,12 +4,12 @@ using Sivan.Models.Entities;
 
 namespace Sivan.Models.Profiles
 {
-    public class CompraSessionProfile : Profile
+    public class CompraSesionProfile : Profile
     {
 
-        public CompraSessionProfile()
+        public CompraSesionProfile()
         {
-            CreateMap<CompraSesion, CompraSessionDTO>()
+            CreateMap<CompraSesion, CompraSesionDTO>()
                            .ForMember(destino => destino.Id, option => option.MapFrom(origen => origen.Id))
                            .ForMember(destino => destino.UsuarioId, option => option.MapFrom(origen => origen.UsuarioId))
                            .ForMember(destino => destino.Total, option => option.MapFrom(origen => origen.Total))

@@ -21,13 +21,11 @@ namespace Sivan.Models.Entities
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [StringLength(60)]
-        [Column("Descripcion")]
         [DataType(DataType.Text)]
         public string Banco { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [StringLength(30)]
-        [Column("Descripcion")]
         [DataType(DataType.Text)]
         public string Estado { get; set; }
 

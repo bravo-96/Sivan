@@ -2,11 +2,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Sivan.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,8 +35,8 @@ namespace Sivan.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Sivan.API", Version = "v1" });
             });
 
-            //services.AddDbContext<AutoDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AutoMotionDB"),
-            //  b => b.MigrationsAssembly("AutomovilesEs.AutoMotion.API")));
+            services.AddDbContext<SivanDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SivanDb"),
+              b => b.MigrationsAssembly("Sivan.API")));
 
         }
 

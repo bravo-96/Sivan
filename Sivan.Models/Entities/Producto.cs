@@ -17,13 +17,11 @@ namespace Sivan.Models.Entities
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [StringLength(500)]
-        [Column("Descripcion")]
         [DataType(DataType.Text)]
         public string Descripcion { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [StringLength(60)]
-        [Column("Descripcion")]
         [DataType(DataType.Text)]
         public string Coleccion { get; set; }
 

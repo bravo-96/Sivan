@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sivan.Repositories.Interfaces
 {
-    public interface ICompraSessionRepository
+    public interface ICompraSesionRepository
     {
         Task<CompraSesion> Insert(CompraSesion model);
         Task<CompraSesion> Update(CompraSesion model);
