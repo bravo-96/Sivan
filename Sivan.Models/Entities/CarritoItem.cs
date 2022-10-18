@@ -1,49 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sivan.Models.Entities
 {
-    [Table(name: "detalle_pago")]
-    public class DetallePago
+    [Table(name: "Carrito_items", Schema = "dbo")]
+
+    public class CarritoItem
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        [ForeignKey("orden_id")]
-        [Column("orden_id")]
-        public int OrdenId { get; set; }
+        [ForeignKey(name: "SesionId")]
+        [Column("sesion_id")]
+        public int SesionId { get; set; }
+        public Usuario Usuario { get; set; }
+
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        [Column(TypeName = "decimal(12, 2)")]
-        public decimal Monto { get; set; }
+        [ForeignKey(name: "productoId")]
+        [Column("producto_id")]
+        public int ProductoId { get; set; }
+        public Producto Producto { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        [StringLength(255)]
-        [Column("Descripcion")]
-        [DataType(DataType.Text)]
-        public string Banco { get; set; }
-
-        [Required(ErrorMessage = "El campo {0} es requerido")]
-        [StringLength(255)]
-        [Column("Descripcion")]
-        [DataType(DataType.Text)]
-        public string Estado { get; set; } 
+        public int Cantidad { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [DataType(DataType.DateTime)]
         [Column("fecha_creacion")]
         public DateTime FechaCreacion { get; set; }
 
+
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [DataType(DataType.DateTime)]
         [Column("fecha_modificacion")]
         public DateTime FechaModificacion { get; set; }
+
     }
 }

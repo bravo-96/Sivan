@@ -4,11 +4,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Sivan.Models.Entities
 {
-    [Table(name: "Productos")]
+    [Table(name: "productos", Schema = "dbo")]
     public class Producto
     {
-        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Key]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
@@ -17,13 +16,13 @@ namespace Sivan.Models.Entities
         public string Nombre { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        [StringLength(255)]
+        [StringLength(500)]
         [Column("Descripcion")]
         [DataType(DataType.Text)]
         public string Descripcion { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        [StringLength(255)]
+        [StringLength(60)]
         [Column("Descripcion")]
         [DataType(DataType.Text)]
         public string Coleccion { get; set; }
@@ -32,7 +31,7 @@ namespace Sivan.Models.Entities
         [ForeignKey("marca_id")]
         [Column("marca_id")]
         public int Marca_Id { get; set; }
-        //public Marca Marca { get; set; }
+        public Marca Marca { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [Column(TypeName = "char(13)")]
@@ -51,7 +50,6 @@ namespace Sivan.Models.Entities
         public int ProductoInventarioId { get; set; }
         public ProductoInventario ProductoInventario { get; set; }
 
-
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [Column(TypeName = "decimal(12, 2)")]
         public decimal Precio { get; set; }
@@ -63,7 +61,7 @@ namespace Sivan.Models.Entities
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [ForeignKey("descuento_id")]
         [Column("descuento_id")]
-        public int DescuentoId { get; set; }
+        public int? DescuentoId { get; set; }
         public Descuento Descuento { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]

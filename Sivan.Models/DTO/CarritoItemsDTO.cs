@@ -1,29 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sivan.Models.DTO
 {
     public class CarritoItemsDTO
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Display(Name = "Id")]
+        [Required(ErrorMessage = "El campo {0} es requerido")]
         public int Id { get; set; }
 
+        [Display(Name = "Sesion")]
         [Required(ErrorMessage = "El campo {0} es requerido")]
         public int SesionId { get; set; }
 
+        [Display(Name = "Producto")]
         [Required(ErrorMessage = "El campo {0} es requerido")]
         public int ProductoId { get; set; }
 
+        [Display(Name = "Cantidad")]
         [Required(ErrorMessage = "El campo {0} es requerido")]
         public int Cantidad { get; set; }
 
+        [Display(Name = "Fecha de creación")]
         public DateTime FechaCreacion { get; set; }
 
+        [Display(Name = "Fecha de modificación")]
         public DateTime FechaModificacion { get; set; }
 
     }

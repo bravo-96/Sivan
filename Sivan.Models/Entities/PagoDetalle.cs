@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Sivan.Models.DTO
+namespace Sivan.Models.Entities
 {
-    [Table(name: "detalle_pago")]
-    public class DetallePagoDTO
+    [Table(name: "pagos_detalles", Schema = "dbo")]
+    public class PagoDetalle
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
@@ -25,16 +20,16 @@ namespace Sivan.Models.DTO
         public decimal Monto { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        [StringLength(255)]
+        [StringLength(60)]
         [Column("Descripcion")]
         [DataType(DataType.Text)]
         public string Banco { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        [StringLength(255)]
+        [StringLength(30)]
         [Column("Descripcion")]
         [DataType(DataType.Text)]
-        public string Estado { get; set; } // !!!!!!
+        public string Estado { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [DataType(DataType.DateTime)]

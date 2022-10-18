@@ -4,11 +4,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Sivan.Models.Entities
 {
-    [Table(name: "Productos_Categorias")]
+    [Table(name: "productos_categorias", Schema = "dbo")]
     public class ProductoCategoria
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]

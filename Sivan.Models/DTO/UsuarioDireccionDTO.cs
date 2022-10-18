@@ -1,40 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Sivan.Models.DTO
 {
-    public class UsuarioPagosDTO
+    public class UsuarioDireccionDTO
     {
-
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Display(Name = "Id")]
+        [Required(ErrorMessage = "El campo {0} es requerido")]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
         public int UsuarioId { get; set; }
 
-        [StringLength(200)]
+        [StringLength(100)]
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [DataType(DataType.Text)]
         public string Direccion { get; set; }
-
 
         [StringLength(100)]
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [DataType(DataType.Text)]
         public string Ciudad { get; set; }
 
-
         [Required(ErrorMessage = "El campo {0} es requerido")]
+        [StringLength(10)]
         [DataType(DataType.Text)]
         public int CodigoPostal { get; set; }
 
-
-        [StringLength(180)]
+        [StringLength(60)]
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [DataType(DataType.Text)]
         public string Pais { get; set; }

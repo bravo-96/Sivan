@@ -1,34 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sivan.Models.Entities
 {
-    [Table(name: "CarritoItems", Schema = "dbo")]
+    [Table(name: "Compras_sesiones", Schema = "dbo")]
 
-    public class CarritoItems
+    public class CompraSesion
     {
-
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        [ForeignKey(name: "SesionId")]
-        public int SesionId { get; set; }
-        //public Usuario Usuario {get; set;}
-
-
-        [Required(ErrorMessage = "El campo {0} es requerido")]
-        [ForeignKey(name: "ProductoId")]
-        public int ProductoId { get; set; }
-        //public Producto Producto {get; set;}
+        [ForeignKey(name: "UsuarioId")]
+        [Column("usuario_id")]
+        public int UsuarioId { get; set; }
+        public Usuario Usuario { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        public int Cantidad { get; set; }
+        public int Total { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [DataType(DataType.DateTime)]
@@ -40,6 +30,5 @@ namespace Sivan.Models.Entities
         [DataType(DataType.DateTime)]
         [Column("fecha_modificacion")]
         public DateTime FechaModificacion { get; set; }
-
     }
 }

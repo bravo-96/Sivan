@@ -4,17 +4,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Sivan.Models.Entities
 {
-    [Table(name: "orden_item")]
+    [Table(name: "ordenes_items", Schema = "dbo")]
     public class OrdenItem
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        [ForeignKey("orden_id")]
-        [Column("orden_id")]
+        [ForeignKey("orden_detalle_id")]
+        [Column("orden_detalle_id")]
         public int OrdenId { get; set; }
+        public OrdenDetalle OrdenDetalle { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [ForeignKey("producto_id")]

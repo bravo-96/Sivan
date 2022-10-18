@@ -1,15 +1,10 @@
 ﻿using AutoMapper;
 using Sivan.Models.DTO;
 using Sivan.Models.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sivan.Models.Profiles
 {
-     public class OrdenItemProfile : Profile
+    public class OrdenItemProfile : Profile
     {
 
         public OrdenItemProfile()

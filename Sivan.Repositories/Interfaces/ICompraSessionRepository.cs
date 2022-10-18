@@ -9,10 +9,10 @@ namespace Sivan.Repositories.Interfaces
 {
     public interface ICompraSessionRepository
     {
-        Task<CompraSession> Insert(CompraSession model);
-        Task<CompraSession> Update(CompraSession model);
+        Task<CompraSesion> Insert(CompraSesion model);
+        Task<CompraSesion> Update(CompraSesion model);
         Task Delete(int id);
-        Task<IEnumerable<CompraSession>> GetAll();
-        Task<CompraSession> GetById(int id);
+        Task<IEnumerable<CompraSesion>> GetAll();
+        Task<CompraSesion> GetById(int id);
     }
 }

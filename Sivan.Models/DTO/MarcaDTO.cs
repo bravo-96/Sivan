@@ -1,25 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Sivan.Models.DTO
 {
     public class MarcaDTO
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Display(Name = "Id")]
+        [Required(ErrorMessage = "El campo {0} es requerido")]
         public int Id { get; set; }
 
-        [StringLength(200)]
+        [StringLength(60)]
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [DataType(DataType.Text)]
         public string Nombre { get; set; }
 
-
-        [StringLength(200)]
+        [StringLength(500)]
         [DataType(DataType.ImageUrl)]
         public string ImagenUrl { get; set; }
     }

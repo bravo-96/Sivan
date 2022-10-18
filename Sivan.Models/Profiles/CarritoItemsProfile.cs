@@ -1,11 +1,6 @@
 ﻿using AutoMapper;
 using Sivan.Models.DTO;
 using Sivan.Models.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sivan.Models.Profiles
 {
@@ -13,7 +8,7 @@ namespace Sivan.Models.Profiles
     {
         public CarritoItemsProfile()
         {
-            CreateMap<CarritoItems, CarritoItemsDTO>()
+            CreateMap<CarritoItem, CarritoItemsDTO>()
                            .ForMember(destino => destino.Id, option => option.MapFrom(origen => origen.Id))
                            .ForMember(destino => destino.SesionId, option => option.MapFrom(origen => origen.SesionId))
                            .ForMember(destino => destino.ProductoId, option => option.MapFrom(origen => origen.ProductoId))
